@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+     <!-- <bean id = "stud1" class = "com.scp.springdemo.Student" autowire="constructor" ><scope="prototype">
+      <property name = "studId" value = "101"/>
+      <property name = "studFName" value = "aaa"/>
+      <property name = "studLName" value = "XXX"/>
+      <property name = "address" ref="add"/>
+   </bean> -->  
+ 
+    <bean id = "stud1" class = "com.scp.springdemo.Student" autowire="constructor">
+      <constructor-arg name ="studId" value="10"></constructor-arg>
+       <constructor-arg name ="studFName" value="aaa"></constructor-arg>
+       <constructor-arg name ="studLName" value="xxx"></constructor-arg>
+     <!--  <constructor-arg name="address" ref="address"/> -->  
+   </bean>
+  <!--  <bean id = "address" class = "com.scp.springdemo.Address">
+   <constructor-arg name ="pincode" value="413005"></constructor-arg>
+       <constructor-arg name ="city" value="pune"></constructor-arg>
+   </bean> -->
+   
+   <!-- <bean id = "stud1" class = "com.scp.springdemo.Student">
+      <property name = "studId" value = "101"/>
+      <property name = "studFName" value = "aaa"/>
+      <property name = "studLName" value = "XXX"/>
+      <property name = "address" ref="add"/>
+   </bean>
+   
+   
+    -->
+    <bean id = "address" class = "com.scp.springdemo.Address">
+      <property name = "pincode" value = "411052"/>
+      <property name = "city" value = "pune"/>
+     
+   </bean> 
+   
+    <!-- <bean id = "add" class = "com.scp.springdemo.Address" >
+      <property name = "pincode" value = "411072"/>
+      <property name = "city" value = "mumbai"/>
+     
+   </bean>
+ -->
+</beans>
